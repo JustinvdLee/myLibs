@@ -7,9 +7,9 @@ bool primeFactors(ulLong n, uInt &p, uInt &q) {
         return false;
 
     b = n / a;
+
     if (prime(b) != 0)
         return false;
-
     if (a * b != n)
         return false;
 

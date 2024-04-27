@@ -1,3 +1,8 @@
-add_library(primeLib STATIC primeLib.cpp)
-target_include_directories(primeLib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+cmake_minimum_required(VERSION 3.26)
+
+set (LIB_NAME primeLib)
+project(${LIB_NAME})
+
+add_library(${LIB_NAME} STATIC ${LIB_NAME}.cpp)
+target_include_directories(${LIB_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 

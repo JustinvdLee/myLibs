@@ -13,9 +13,10 @@ set_target_properties(${projectName} PROPERTIES
     MACOSX_BUNDLE ON
 )
 
-#  Add / remove the specific libraries you (don't) need
-add_subdirectory(${LIB_DIR}/timingLib timingLib)
-add_subdirectory(${LIB_DIR}/primeLib primeLib)
 
-target_link_libraries(${projectName} primeLib timingLib)
+include_directories(${LIB_DIR}/timingLib ${LIB_DIR}/primeLib)
+find_library(TIMING_LIB timingLib PATH ${LIB_DIR}/timingLib/build)
+find_library(PRIME_LIB primeLib PATH ${LIB_DIR}/primeLib/build)
+
+target_link_libraries(${projectName} ${TIMING_LIB} ${PRIME_LIB})
 
