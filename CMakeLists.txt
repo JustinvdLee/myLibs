@@ -16,10 +16,10 @@ set_target_properties(${projectName} PROPERTIES
 )
 
 # add the libraries that are needed
-find_library(TIMING_LIB timingLib PATH ${LIB_DIR}/timingLib)
-find_library(PRIME_LIB primeLib PATH ${LIB_DIR}/primeLib)
+find_library(TIMING timing PATH ${LIB_DIR}/timing)
+find_library(PRIME prime PATH ${LIB_DIR}/prime)
 
 # link all the libraries and header files
-include_directories(${LIB_DIR}/timingLib ${LIB_DIR}/primeLib)
+include_directories(${LIB_DIR}/timing ${LIB_DIR}/prime)
 target_link_libraries(${projectName} ${TIMING_LIB} ${PRIME_LIB})
 

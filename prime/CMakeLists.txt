@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
-set (LIB_NAME timingLib)
+set (LIB_NAME prime)
 
 # initialise a project to compile the library on its own and add the .cpp file(s)
 project(${LIB_NAME})

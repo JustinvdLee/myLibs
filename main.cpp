@@ -1,6 +1,6 @@
 #include <iostream>
-#include "primeLib.h"
-#include "timingLib.h"
+#include "prime.h"
+#include "timing.h"
 
 int main() {
     std::cout << "This is an library example to show how to include the correct files\n";

@@ -1,4 +1,4 @@
-#include "primeLib.h" 
+#include "prime.h" 
 
 bool primeFactors(ulLong n, uInt &p, uInt &q) {
     uLong a = prime(n), b;
