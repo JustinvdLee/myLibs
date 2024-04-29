@@ -21,5 +21,5 @@ find_library(PRIME prime PATH ${LIB_DIR}/prime)
 
 # link all the libraries and header files
 include_directories(${LIB_DIR}/timing ${LIB_DIR}/prime)
-target_link_libraries(${projectName} ${TIMING_LIB} ${PRIME_LIB})
+target_link_libraries(${projectName} ${TIMING} ${PRIME})
 
