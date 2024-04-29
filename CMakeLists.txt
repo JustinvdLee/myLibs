@@ -17,7 +17,14 @@ set_target_properties(${projectName} PROPERTIES
 
 # add the libraries that are needed
 find_library(TIMING timing PATH ${LIB_DIR}/timing)
+if (NOT TIMING)
+    add_subdirectory(${LIB_DIR}/timing timing)
+endif()
+
 find_library(PRIME prime PATH ${LIB_DIR}/prime)
+if (NOT PRIME)
+    add_subdirectory(${LIB_DIR}/prime prime)
+endif()
 
 # link all the libraries and header files
 include_directories(${LIB_DIR}/timing ${LIB_DIR}/prime)
