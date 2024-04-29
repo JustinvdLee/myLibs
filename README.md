@@ -1,4 +1,4 @@
-# Personal Libraries
+## Personal Libraries
 This is a folder that contains general libraries, started by JustinvdLee.
 All the folders are made to work with cmake.
 It also serves as a cmake framework, to quickstart a project by copying a few files
@@ -12,26 +12,28 @@ If problems / improvements are spotted, please contact the maintainer.
 You are free to use this repository for non-commercial purposes, as long as you credit the original source.
 For commercial use, please contact the current maintainer of the repository.
 
+### Tutorial
 #### use one library
 1. Copy the library you want to use.
 2. Add the following lines to your CMakeLists.txt
     
 ```CMake
 set(LIB_DIR /the/directory/of/the/library)
-find_library(NAME_LIB nameLib PATH ${LIB_DIR}/nameLib/build)
+find_library(NAME_LIB nameLib PATH ${LIB_DIR}/nameLib/libBuild)
 target_link_libraries(${projectName} ${NAME_LIB})
 ```
 ```text
 Note1: ${LIB_DIR} should equal to the location of this folder, either replace it or use set()
 Note2: If you want to make a one-time library, you can also copy a lib-folder and modify the files there.
 ```
-Or you can use the following lines if you don't mind the library being rebuild for ever project.
-If the library is a subdirectory of your project root, you can omit the first argument of the second line.
+Or you can use the following lines if you don't mind the library being rebuild for ever project:
 ```CMake
 set(LIB_DIR /the/directory/of/the/library)
 add_subdirectory(${LIB_DIR}/nameLib nameLib)
 ```
-
+```text
+Note1: If the library is a subdirectory of your project root, you can omit the first argument of the second line.
+```
 
 #### use the framework
 1. Copy the CMakeLists.txt and main.cpp to where you would like to start your project.
