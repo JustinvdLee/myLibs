@@ -38,13 +38,41 @@ Note1: If the library is a subdirectory of your project root, you can omit the f
 2. Look through the CMakeLists.txt and follow the instructions of the comments.
     Please remove the comments when you have executed their instructions
 3. From there, modify the files to include what is needed for the project.
-4. The advised way to build the project is to use a build/ directory. For this, use the commands below:
+4. The advised way to build the project is to use a .build/ directory. For this, use the commands below:
 ```shell
-mkdir build && cd build
+mkdir .build && cd .build
 cmake ../. && make
 ```
 5. The project root should contain the ./projectName.exe file. This can be changed in the main CMakeLists.txt
 6. Run the .exe file with the following command (in the build directory):
 ```shell
 ../projectName
+```
+
+### Project Structure and naming convention
+This chapter shows the layout and naming convention of this repository:
+```text
+repo root
+|- CMakeLists.txt
+|- main.cpp
+|- pojectName.exe
+|- README.md
+|
+|- /name1
+|   |- CMakeLists.txt
+|   |- name1.cpp
+|   |- name1.h
+|   |- libname1.a
+|
+|- /name2
+|   |- CMakeLists.txt
+|   |- /inc
+|   |   |- name2a.h
+|   |   |- name2b.h
+|   |- libname1.a
+|   |- /src
+|   |   |- name2a.cpp
+|   |   |- name2b.cpp
+|
+|- etc.
 ```
