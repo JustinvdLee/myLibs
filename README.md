@@ -17,13 +17,17 @@ For commercial use, please contact the current maintainer of the repository.
 #### Building
 To build a library or project, use the following commands:
 ```shell
-mkdir .build && cd .build ```
+mkdir .build && cd .build
+```
 ```shell
-cmake ../. ```
+cmake ../.
+```
 ```shell
-make ```
+make
+```
 ```shell
-cd .. && rm -rf .build/ ```
+cd .. && rm -rf .build/
+```
 
 >Note1: Beware of the dangers of 'rm', the folder doesn't need to be deleted, this is only done for the purpose of clean structure
 
