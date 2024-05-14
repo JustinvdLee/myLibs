@@ -9,8 +9,8 @@ int main() {
     Timing T;
     T.stop();
 
-    uInt a, b;
-    int i = 11 * 19;
+    uint32_t a, b;
+    uint16_t i = 11 * 19;
     primeFactors(i, a, b);
 
     return 0;
