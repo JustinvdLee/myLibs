@@ -17,19 +17,16 @@ For commercial use, please contact the current maintainer of the repository.
 #### Building
 To build a library or project, use the following commands:
 ```shell
-mkdir .build && cd .build
+mkdir .build
+cd .build
 ```
 ```shell
 cmake ../.
 ```
 ```shell
-make
+cd ..
 ```
-```shell
-cd .. && rm -rf .build/
-```
-
->Note1: Beware of the dangers of 'rm', the folder doesn't need to be deleted, this is only done for the purpose of clean structure
+> Note: The .build/ directory can now be deleted, but this is not needed.
 
 #### use a library
 1. Copy the library you want to use.
@@ -45,7 +42,7 @@ Or you can use the following line instead of the find_library command if you don
 ```CMake
 add_subdirectory(${LIB_DIR}/nameLib nameLib)
 ```
->Note1: If the library is a subdirectory of your project root, you can omit the first argument of the second line.
+>Note: If the library is a subdirectory of your project root, you can omit the first argument of the second line.
 
 #### modify a library
 If you want to copy a library and modify it to your specific needs, you can follow the next steps:
@@ -66,7 +63,8 @@ If you want to copy a library and modify it to your specific needs, you can foll
 ```
 
 ### Project Structure and naming convention
-This chapter shows the layout and naming convention of this repository:
+This chapter shows the layout and naming convention of this repository.
+It is advised to follow this, in order to keep everything working smooth.
 ```text
 repo root
 |- CMakeLists.txt
@@ -85,11 +83,11 @@ repo root
 |
 |- name2/
 |   |- CMakeLists.txt
-|   |- /inc
+|   |- inc/
 |   |   |- name2a.h
 |   |   |- name2b.h
 |   |- libname1.a
-|   |- /src
+|   |- src/
 |   |   |- name2a.cpp
 |   |   |- name2b.cpp
 |
