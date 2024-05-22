@@ -1,5 +1,17 @@
+/*
+ *  lib: ringbuffer
+ *      Have a ringbuffer with a write pointer
+ *      The size is from 1 to 65535
+ *      The write pointer points to the last written element
+ *
+ *  Properties:
+ *      Date:   2024-05-22
+ *      Status: Must haves completed
+ *  
+ *  Improvements:
+ *      Improving error handling for incorrect input.
+ */
 #pragma once
-
 #include <cstdint>
 #include <cstring>
 

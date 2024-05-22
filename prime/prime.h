@@ -1,3 +1,16 @@
+/*
+ *  lib: prime
+ *      Working with prime numbers
+ *      By default, the numbers are uint32_t or uint64_t.
+ *
+ *  Properties:
+ *      Date:   2024-05-22
+ *      Status: Must haves completed
+ *  
+ *  Improvements:
+ *      Optimisation for faster calculations.
+ *      Improving error handling for incorrect input.
+ */
 #pragma once
 #include <cstdint>
 
