@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdint>
 #include "prime.h"
 #include "ringbuffer.h"
 #include "sort.h"
@@ -13,17 +14,17 @@ int main() {
     cout << "If you want to use it, please have a look at the README.md!" << endl;
 
     uint32_t a, b;
-    uint16_t i = 11 * 19;
+    uint64_t i = 11 * 19;
     primeFactors(i, a, b);
     if (a != 11 || b != 19)
         cout << "Error in prime factors!" << endl;
 
     RingBuffer<int> buf(size);
-    buf.write(1);
-    buf.write(2);
-    if (buf.read(1) != 1 || buf.read() != 2)
+    buf.write(1); buf.write(2); buf.write(3);
+    buf.write(4); buf.write(5); buf.write(6);
+    if (buf.read(1) != 5 || buf.read() != 6)
         cout << "Error reading buffer!" << endl;
-
+    
     int array[size];
     fillRandom(array, size, 100);
     quickSort(array, size);

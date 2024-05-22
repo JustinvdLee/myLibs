@@ -22,9 +22,6 @@ public:
     /*! @brief constructor for ringbuffor of any type
      *  @param s the size of the buffer */
     RingBuffer(uint16_t);
-
-    /*! @brief destructor to free the memory */
-    ~RingBuffer() { delete[] buffer; }
     
     /*! @brief reads the last element that was written
      *  @return the value at the writePtr address */
