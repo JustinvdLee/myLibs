@@ -15,7 +15,10 @@ For commercial use, please contact the current maintainer of the repository.
 
 ## Tutorials
 ### Building
-To build a library or project, use the following commands:
+The building of project is preferably done in a .build/ directory.
+The default output directory in this repository is the project root.
+Keep in mind that if you change the build location, the output directory will also change.
+To build a library or project, use the following commands in the project root:
 ```shell
 mkdir .build
 cd .build
@@ -26,14 +29,12 @@ cmake ../.
 ```shell
 make
 ```
-```shell
-cd ..
-```
-> Note: The .build/ directory can now be deleted.
+> Note: You can now go back and delete the .build/ directory.
 
 ### use a library
-1. Copy the library you want to use.
-2. Add the following lines to your CMakeLists.txt:
+1. Please read the introduction in the .h file(s) to see how to use the library
+2. Copy the library you want to use.
+3. Add the following lines to your CMakeLists.txt:
 ```CMake
 set(LIB_DIR /the/libraries/directory)
 find_library(NAME_LIB nameLib PATH ${LIB_DIR}/nameLib)
@@ -45,7 +46,8 @@ Or you can use the following line instead of the find_library command if you don
 ```CMake
 add_subdirectory(${LIB_DIR}/nameLib nameLib)
 ```
->Note: If the library is a subdirectory of your project root, you can omit the first argument of the second line.
+>Note: If the library is a subdirectory of your project root, you can omit the first argument.
+4. include the library in your main project.
 
 ### modify a library
 If you want to copy a library and modify it to your specific needs, you can follow the next steps:
@@ -55,14 +57,14 @@ If you want to copy a library and modify it to your specific needs, you can foll
 
 ### use the framework
 1. Copy the CMakeLists.txt and the app/ directory to the project root.
-2. Look through the CMakeLists.txt and follow the instructions of the comments.
+2. Look through the CMakeLists.txt and app/CMakeLists.txt and follow the instructions of the comments.
     Please remove the comments when you have executed their instructions
 3. From there, modify the files to include what is needed for the project.
-4. The advised way to build the project is to use a .build/ directory. (see above commands) 
+4. The advised way to build the project is to use a .build/ directory. (see tutorial 'build') 
 5. The project root should contain the ./projectName.exe file. This can be changed in the app/CMakeLists.txt
 6. Run the .exe file with the following command (in the build directory):
 ```shell
-../projectName
+./projectName
 ```
 
 ## Project Structure and naming convention
