@@ -1,20 +1,20 @@
-## Personal Libraries
+# Personal Libraries
 This is a folder that contains general libraries that can also be adapted to specific needs.
 All the folders are made to work with cmake.
 It also serves as a cmake framework, to quickstart a project by copying a few files.
 
-### Disclaimer
+## Disclaimer
 This project is started by JustinvdLee.
 This repository is not made by a professional.
 All of the on this is done with good intent, but there is NO guarantee that it will work, even for the intended purpose.
 If problems / improvements are spotted, please contact the maintainer.
 
-### Copyright
+## Copyright
 You are free to use this repository for non-commercial purposes, as long as you credit the original source.
 For commercial use, please contact the current maintainer of the repository.
 
-### Tutorial
-#### Building
+## Tutorials
+### Building
 To build a library or project, use the following commands:
 ```shell
 mkdir .build
@@ -24,11 +24,14 @@ cd .build
 cmake ../.
 ```
 ```shell
+make
+```
+```shell
 cd ..
 ```
-> Note: The .build/ directory can now be deleted, but this is not needed.
+> Note: The .build/ directory can now be deleted.
 
-#### use a library
+### use a library
 1. Copy the library you want to use.
 2. Add the following lines to your CMakeLists.txt:
 ```CMake
@@ -36,7 +39,7 @@ set(LIB_DIR /the/libraries/directory)
 find_library(NAME_LIB nameLib PATH ${LIB_DIR}/nameLib)
 target_link_libraries(${projectName} ${NAME_LIB})
 ```
->Note1: ${LIB_DIR} should equal to the location of this folder, either replace it or use set()
+>Note: ${LIB_DIR} should equal to the location of this folder, either replace it or use set()
 
 Or you can use the following line instead of the find_library command if you don't mind the library being rebuild for ever project:
 ```CMake
@@ -44,13 +47,13 @@ add_subdirectory(${LIB_DIR}/nameLib nameLib)
 ```
 >Note: If the library is a subdirectory of your project root, you can omit the first argument of the second line.
 
-#### modify a library
+### modify a library
 If you want to copy a library and modify it to your specific needs, you can follow the next steps:
 1. Copy the library you want to use
 2. Modify the .cpp and .h files as you like
 3. Rebuild the library as described earlier
 
-#### use the framework
+### use the framework
 1. Copy the CMakeLists.txt and the app/ directory to the project root.
 2. Look through the CMakeLists.txt and follow the instructions of the comments.
     Please remove the comments when you have executed their instructions
@@ -62,7 +65,7 @@ If you want to copy a library and modify it to your specific needs, you can foll
 ../projectName
 ```
 
-### Project Structure and naming convention
+## Project Structure and naming convention
 This chapter shows the layout and naming convention of this repository.
 It is advised to follow this, in order to keep everything working smooth.
 ```text
@@ -93,3 +96,4 @@ repo root
 |
 |- etc.
 ```
+
