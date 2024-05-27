@@ -19,10 +19,11 @@ int main() {
     if (a != 11 || b != 19)
         cout << "Error in prime factors!" << endl;
 
+    bool temp = false;
     RingBuffer<int> buf(size);
     buf.write(1); buf.write(2); buf.write(3);
     buf.write(4); buf.write(5); buf.write(6);
-    if (buf.read(1) != 5 || buf.read() != 6)
+    if (buf.read(1, temp) != 5 || buf.read() != 6 || temp == false)
         cout << "Error reading buffer!" << endl;
     
     int array[size];
