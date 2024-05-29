@@ -17,27 +17,27 @@
 #include <cstdlib>
 #include <ctime>
 
-/// @brief function that fills an array
-/// @param array[] the pointer to the start of the array
-/// @param size the size of the array
-/// @param max the maximum number to be generated
+/* @brief fills an array with random values
+ * @param array[] the pointer to the start of the array
+ * @param size the size of the array
+ * @param max the maximum number to be generated */
 void fillRandom(int[], int, int);
 
-/// @brief function that sorts an array using bubble sort
-/// @param array[] the pointer to the start of the array
-/// @param size the size of the array
+/* @brief sorts an array using bubble sort
+ * @param array[] the pointer to the start of the array
+ * @param size the size of the array */
 template<typename Ttype>
 void bubbleSort(Ttype[], int);
 
-/// @brief function that sorts an array using quick sort
-/// @param array[] the pointer to the start of the array
-/// @param size the size of the array
+/* @brief sorts an array using quick sort
+ * @param array[] the pointer to the start of the array
+ * @param size the size of the array */
 template<typename Ttype> 
 void quickSort(Ttype[], int);
 
-/// @brief function that sorts an array using merge sort
-/// @param array[] the pointer to the start of the array
-/// @param size the size of the array
+/* @brief sorts an array using merge sort
+ * @param array[] the pointer to the start of the array
+ * @param size the size of the array */
 template<typename Ttype>
 void mergeSort(Ttype[], int);
 
