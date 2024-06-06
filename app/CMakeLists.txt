@@ -7,7 +7,7 @@ set_target_properties(${projectName} PROPERTIES
 )
 
 # add the libraries that are needed
-set(libList prime; ringbuffer; sort; timing)        # !update this to use the libraries that are needed!
+set(libList pid; prime; ringbuffer; sort; timing)   # !update this to use the libraries that are needed!
 
 # add the libraries to the project
 # TODO: Improve or clean this code
